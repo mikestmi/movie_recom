@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>What movie should i watch tonight?</title>        
+        
+        <!-- Add style to the tables. -->
+		<style>
+	        table, th, td 
+	        {
+	            margin:10px 0;
+	            border:solid 1px #333;
+	            padding:2px 4px;
+	            font:15px Verdana;
+	        }
+	        th {
+	            font-weight:bold;
+	        }
+    	</style>
+		
+	</head>
+	<!-- Load a background image for the page, i used the url to load and also i stored the image locally for faster loading. -->
+	<!-- <body style="background-image:url('http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSwatches_1400x900.jpg')"> -->
+	<body background="images/background_image.jpg">
+		<div>
+
+			<!-- A paragraph that includes a textbox and a search button for searching a movie title. Two paragraphs which show to the client important informations about the proccessing of his/her actions. -->
+			<p align="center">
+				<input type="text" id="text_search"><br> <br>
+				<button id='search' onclick="show_movies()">Search</button> <br> <br> <br> <br>
+				<p id="warnings" align="center"></p>
+				<p id="movie_votes"></p>
+			</p>
+			
+			<!-- Area to present the table of the searched movies. -->
+			<div id = 'contentArea'></div>
+			<p>
+				<!-- A paragraph which contains two buttons, one that send the voted movies to the server and another that show to the client the recommended movies. -->
+				<button id='vote' onclick="show_ratings(ids)">Vote</button>
+				<button id='recommend' onclick="get_recommendations()">Show recommended movies</button>
+			</p>
+			<!-- Area to present the table of the recommended movies. -->
+			 <div id = 'contentArea2' align="center"> </div>
+			
+		</div>
+		
+		<!-- Load the JavaScripts. -->
+		<script src="js_folder/search_movies.js"></script>
+		<script src="js_folder/return_ratings.js"></script>
+		<script src="js_folder/recommend_movies.js"></script>	
+	</body>
+</html>
