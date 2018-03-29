@@ -1,7 +1,7 @@
 var config = {
-	dbhost:"35.187.37.51",
+	dbhost:"XX.XX.XX.XX",
 	username:"root",
-	password:"TcjTA4S8ndtU",
-	database:'myapp_db'
+	password:"---",
+	database:'mydb'
 };
 module.exports = config;
